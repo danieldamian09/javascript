@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Fundamentos</title>
+</head>
+<body>
+    <h1>Curso JavaScript: 4. Constantes (const)</h1>
+
+    <script>
+        const PI = 3.1416;
+        console.log(PI);
+        // no se le puede reasignar el valor a una constante declarada con la palabra reservada const
+        // PI = 3.15;
+        // no podemos declarar variables con la palabra const que esten vacias:
+        // const nueve;
+
+        // podemos declarar una variable que no tenga datos con la palabra reservada var o let:
+        let dog;
+        dog = "KENAI";
+        console.log(dog);
+
+        // muy importante depende del tipo de dato podemos usar const, para los datos compuestos se puede utilizar:
+        /* datos compuestos
+            object{}
+            array[]
+            funcion(){}
+            class{}
+        */
+
+
+
+        // objeto: esta compuesto por una serie de propiedades con un valor:
+        const objeto = {
+            nombre:"Humberto",
+            edad: 36
+        }
+
+        const colores = ["blanco", "negro", "azul"];
+
+        console.log(objeto);
+        console.log(colores);
+
+        // para crear una nueva propiedad al objeto utilizo el punto "." es decir nombre del objeto.nueva propiedad:
+        objeto.correo = "humbertorivero9@gmail.com";
+        console.log(objeto);
+
+        // para agregar un nuevo dato a los array utilizamos la palabra push:
+        colores.push("anaranjado");
+        console.log(colores);
+
+        
+
+    </script>
+    
+</body>
+</html>

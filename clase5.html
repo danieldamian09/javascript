@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Fundamentos</title>
+</head>
+<body>
+    <h1>Cadenas de Texto(string)</h1>
+
+    <p>Propiedades de los datos string</p>
+
+    <p>son caracteristicas que estan describiendo o definiendo algo del objeto</p>
+
+        <p>String.prototype</p>
+        <p>String.length</p>
+
+    <p>Metodos de los datos string</p>
+
+    <p>son acciones y terminan con parantesis, reciben ciertos datos para poder trabajar</p>
+
+    <script>
+        let nombre = "Humberto";
+        let apellido = 'Rivero';
+        let saludo = new String("Hola Mundo");
+        let lorem = "      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis consectetur cursus. Etiam vel felis mollis, placerat massa nec, hendrerit metus. Nam venenatis, dolor non fermentum lacinia, nunc nulla efficitur odio, id dapibus nisl risus in massa. Ut metus nunc, efficitur vel iaculis at, rhoncus at felis. Aenean at enim tellus. Vivamus ut purus nunc. Vestibulum consectetur sem ut augue pretium maximus. Aliquam molestie nisl nec nisi vestibulum, a porta ipsum ultrices. Phasellus blandit mi orci, eget condimentum mauris interdum at. Morbi vel metus semper, placerat lacus a, viverra arcu. Nulla sit amet dictum turpis, at consectetur magna. Vivamus ullamcorper facilisis quam, eget iaculis nulla.       "
+        console.log(nombre,apellido,saludo);
+
+        // para conocer la longitud de los array utilizamos:
+
+        console.log(
+            nombre.length,
+            apellido.length,
+            saludo.length
+        );
+
+        // metodos de los string
+        console.log(
+            nombre.toUpperCase(),
+            apellido.toLowerCase()
+        );
+
+        // para buscar una palabra en un string
+        console.log(
+            lorem.includes("nulla"),
+            lorem.includes("humberto")
+        );
+
+        // para quitar los espacion en blanco que estan alrededor de un string (al inicio y al final):
+        console.log(
+            lorem.trim()
+        );
+
+        // para convertir una cadena de texto string en un array hay que darle el separador " "
+        console.log(
+            lorem.split(" ")
+        );
+
+    </script>
+</body>
+</html>

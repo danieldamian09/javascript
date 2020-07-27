@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Fundamentos</title>
+</head>
+<body>
+    <h1>Curso JavaScript: 3. Variables: var 🥊VS🥊 let</h1>
+    <script>
+        // variable de ambito global:
+        var hola = "hola mundo";
+        console.log(hola);
+        // ambito de bloque
+        if(true){
+            var a = 3;
+        }
+
+        // variable de ambito de bloque:
+        let hello = "Hello World";
+        console.log(hello);
+
+        // el objeto donde se almacena el ambito global en el javascript de los navegadores es window
+        console.log(window);
+        // aca se muestra la variable hola = "hola mundo"
+        console.log(window.hola);
+        console.log(window.hello);
+
+        // ambito de bloque
+        var musica = "rock";
+        console.log("variable musica antes del bloque", musica);
+        // esto es un bloque:
+        {
+            var musica = "pop";
+            console.log("variable musica dentro del bloque", musica);
+        }
+
+        console.log("variable musica despues del bloque", musica);
+
+
+
+        let musica2 = "rock";
+            console.log("variable musica antes del bloque", musica2);
+            // esto es un bloque:
+            {
+                let musica2 = "pop";
+                console.log("variable musica dentro del bloque", musica2);
+            }
+
+            console.log("variable musica despues del bloque", musica2);
+        
+
+        // cuando las variables de declaran con la palabra reservada var el compilador eleva la variable, lo que la hace global
+    </script>
+</body>
+</html>
