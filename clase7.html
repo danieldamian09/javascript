@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Curso JavaScript: 7. Números (Numbers)</h1>
+
+    <script>
+        let a = 2;
+        let b = new Number(5);
+        let c = 7.19;
+        let d = "5.6";
+
+        console.log(a,b);
+
+        // para redondear un numero
+        console.log(c.toFixed(1));
+        console.log(c.toFixed(5));
+
+        // muy importante:
+        console.log(parseInt(c));
+
+        console.log(parseFloat(c));
+
+        // Para obtener un numero de una cadena de texto
+        console.log(parseInt(d));
+
+        // para conocer que tipo de dato es:
+        console.log(typeof c, typeof d);
+
+        // para sumar datos iguales
+        console.log(a + b);
+
+        // para sumar datos diferentes
+        console.log(c + d);
+        console.log(parseInt(d) + c);
+        console.log(parseFloat(d) + c);
+        console.log(c + Number.parseInt(d));
+        console.log(c + Number.parseFloat(d));
+
+
+    </script>
+</body>
+</html>
