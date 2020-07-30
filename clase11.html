@@ -7,7 +7,63 @@
 </head>
 <body>
     <h1>Curso JavaScript: 11. Arreglos (Arrays)</h1>
+    <li></li>
 
-    
+    <script>
+        const a = [];
+        const b = [1,true,"Hola",["A","B","C"]];
+        console.log(a);
+        console.log(b);
+        console.log(b.length);
+        console.log(b[2]);
+        console.log(b[3][2]);
+
+        const c = Array.of("X","Y","Z",9,8,7);
+        console.log(c);
+
+        // para rellenar los espacios de un arreglo
+        const d = Array(100).fill(false);
+
+        console.log(d);
+
+        // para crear un arreglo de una forma que casi no se usa 
+
+        const e = new Array();
+        console.log(e);
+
+        const f = new Array(1,2,3,true,false);
+        console.log(f);
+
+        const colores = ["rojo","verde","azul"];
+        console.log(colores);
+
+        colores.push("negro");
+        console.log(colores);
+
+        colores.pop();
+        console.log(colores);
+
+        // metodo importante
+        // para agrgar una funcion a cada uno de los elementos del array
+        colores.forEach(function(el,index){
+            console.log(`<li id="${index}">${el}</li>`);
+        })
+
+        const crearArray = Array(5).fill("hola");
+        console.log(crearArray);
+
+        crearArray.forEach(function(el,index){
+            console.log(`<p id="${index}">${el}</p>`);
+        })
+
+        const practica = Array(3).fill("practica para crear Array");
+        console.log(practica);
+
+        practica.forEach(function(el,index){
+            console.log(`<h2 id="${index}">${el}</h2>`);
+        })
+        
+
+    </script>
 </body>
 </html>

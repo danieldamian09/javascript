@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+
+    <script>
+        let a = new String("Hola");
+        // console.log(a)
+
+        const b ={}
+        console.log(b);
+
+        const c = new Object();
+        console.log(c);
+
+        // dentro de un objeto a las variables se le van a llamar atributos
+        // a las funciones dentro de un objeto se le llaman metodos
+
+        const humberto ={
+            nombre:"Humberto",
+            apellido: "Rivero",
+            edad: 35,
+            pasatiempos:["correr", "hacer ejercicios", "programar"],
+            soltero: false,
+            contacto:{
+                email: "humberto@gmail.com",
+                twiter: "@humberto123",
+                movil: "1122334455"
+            },
+            saludar: function(){
+                console.log("Hola :)");
+            },
+            decirMiNombre: function(){
+                console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años me puedes seguir en ${this.contacto.twiter}`);
+            }
+        }
+
+        console.log(humberto);
+
+        // como accdeder a los atributos y metodos
+
+        console.log(humberto["nombre"]);
+        console.log(humberto["saludar"]);
+        console.log(humberto["contacto"]["email"]);
+        console.log(humberto["apellido"]);
+        console.log(humberto["contacto"]["twiter"]);
+
+        // la sintasix del punto es la mas utilizada
+
+        console.log(humberto.edad);
+        console.log(humberto.pasatiempos);
+        console.log(humberto.soltero);
+        console.log(humberto.pasatiempos[2]);
+        humberto.saludar();
+        humberto.decirMiNombre();
+
+
+        // formar un arreglo con los atributos y metodos
+        console.log(Object.keys(humberto));
+
+        // formar un arreglo con los valores de los atributos y metodos
+        console.log(Object.values(humberto));
+
+        // validar si un objeto tiene una propiedad
+        console.log(humberto.hasOwnProperty("nombre"));
+        console.log(humberto.hasOwnProperty("nacimiento"));
+
+    </script>
+</body>
+</html>
