@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ciclos o Bucles</h1>
+
+    <script>
+
+        // let contador = 0;
+
+        // // siempre se debe agregar un operador de incremento o decrmento
+        // while (contador < 10) {
+        //     console.log("while " + contador);
+        //     contador++;
+        // }
+
+        // // en esta estructura se ejecuta 1 vez:
+        // do {
+        //     console.log("do while " + contador);
+        //     contador++;
+        // } while (contador < 10);
+
+
+
+
+
+        // for(inicializacion de variable; condicion; decremento o incremento){
+        //     sentencia que ejecuta el for
+        // }
+
+        for (let i = 0; i < 10; i++) {
+            console.log("for " + i);
+        }
+
+        let numero = [10,20,30,40,50,60,70,80,90];
+
+        for (let i = 0; i < numero.length; i++) {
+            console.log(numero[i]);    
+        }
+
+
+        // for in para recorrer las propiedades de un OBJETO
+        const humberto ={
+            nombre: "Humberto",
+            apellido: "Rivero",
+            edad: 35,
+        }
+
+        // hay que usar [] para poder acceder a los valores de los atributos
+        for (const propiedad in humberto) {
+            console.log(`Key:${propiedad}, Value:${humberto[propiedad]}`);
+        }
+
+        // for of me permite recorrer todos los elementos de cualquier objeto que sea iterable ejem: array o string
+
+        for (const elemento of numero) {
+            console.log(elemento);
+        }
+
+        let cadena = "Hola Mundo";
+
+        for (const caracter of cadena) {
+            console.log(caracter);
+        }
+
+        // iterable que se puede desconponer
+        
+
+    </script>
+</body>
+</html>
