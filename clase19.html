@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objetos Literales</h1>
+
+    <script>
+        let nombre = "Dog",
+            edad = 7;
+
+        const perro ={
+            nombre:nombre,
+            edad:edad,
+            ladrar:function(){
+                console.log("guauu guauu")
+            }
+        }
+
+        console.log(perro);
+
+        const perro2 ={
+            nombre,
+            edad,
+            raza:"callejero",
+            ladrar(){
+                console.log("guauuu guauuu guauuu!")
+            }
+        }
+
+        console.log(perro2);
+        perro2.ladrar();
+
+    </script>
+</body>
+</html>

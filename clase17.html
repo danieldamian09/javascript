@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Break & Continue</h1>
+
+
+    <script>
+        const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+                     //  0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+
+        // con la instruccion break se sale del ciclo al llegar a 5
+        for (let i = 0; i < numeros.length; i++) {
+            if (i === 5) {
+                break;
+            }
+            // console.log(numeros[i]);
+        }
+
+        // con la instruccion continue se salta el numero 6 y continua 
+        for (let i = 0; i < numeros.length; i++) {
+                if (i === 5) {
+                    continue;
+                }
+                // console.log(numeros[i]);
+            }
+
+        // hacer un ejercicio que muestre los numeros pares e impares del array numeros
+        // esto es para lo numeros pares los cuales estan la posicion inpar del array
+        for(let i=0;i<numeros.length;i++){
+            if((i%2)>0){
+                console.log(numeros[i]);
+            }
+        }
+
+
+        // // para los numeros inpares que estan en la posicion inpar del array
+        for(let i=0;i<numeros.length;i++){
+            if((i%2)===0){
+                console.log(numeros[i]);
+            }
+        }
+
+
+        // otra forma de solucionarlo
+        // const numeros2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+        //     for (let i = 0; i < numeros2.length; i++) {
+        //         if ((i % 2) > 0) {
+        //             continue;
+        //         }
+        //         console.log(numeros2[i]);
+        //     }
+
+
+        //     for (let i = 0; i < numeros2.length - 1; i++) {
+        //         if ((i % 2) === 0) {
+        //             continue;
+        //         }
+        //         console.log(numeros2[i]);
+        //     }
+
+        //     console.log(3%2);
+
+    </script>
+</body>
+
+</html>
