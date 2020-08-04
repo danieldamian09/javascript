@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arrow Functions</h1>
+
+    <script>
+        // Funciones Flecha
+
+        // nueva forma de definir funciones anonimas que sean expresadas
+        const saludar = function(){
+            console.log(`Hola soy una funcion expresada`);
+        }
+
+        saludar();
+
+        // funcion flecha
+        // cuando una funcion flecha no recibe parametros tenemos que colocar los ()
+        const saludar2 = () => console.log(`Hola funcion flecha con una sola instruccion`);
+
+        saludar2();
+
+        // cunado una funcion flecha recibe 1  parametro podemos colocarlo antes de => directamente ejem:
+        const saludar3 = nombre => console.log(`hola ${nombre}`);
+
+
+        saludar3("Humberto");
+
+
+        // otro ejemplo de las funciones:
+
+        const sumar = function(a,b){
+            return a+b;
+        }
+
+        console.log(sumar(8,9));
+
+        // hacer la funcion de suma con una funcion flecha:
+
+        const sumar2 = (a,b) => a+b;
+        
+        console.log(sumar2(9,9));
+
+
+        // cuando una funcion tiene varias lineas de codigo la debemos hacer de la siguiente manera:
+
+        const funcionDeVariasLineas = () =>{
+            console.log("uno");
+            console.log("uno");
+            console.log("uno");
+            
+        };
+
+        funcionDeVariasLineas();
+
+        // -----------------------Para recorrer un array con el metodo forEach y una funcion flecha
+
+        const numeros = [1,2,3,4,5];
+
+        numeros.forEach((el,i) =>{
+            console.log(`${el} esta en la posicion ${i}`);
+        });
+
+        const perro ={
+            nombre: "kenai",
+            ladrar(){
+                console.log(this)
+            }
+        }
+
+        perro.ladrar();
+
+
+        
+    </script>
+</body>
+</html>

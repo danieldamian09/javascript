@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Clases</h1>
+
+    <script>
+        // funcion cosntructora(lo vamos a hacer con class)
+
+        class Animal {
+
+            // El constructor es un metodo especial que se ejecuta en el momento de instanciar la clase                
+            constructor(nombre, genero) {
+                this.nombre = nombre;
+                this.genero = genero;
+            }
+
+            // Metodos
+            sonar() {
+                console.log("hago sonidos por que estoy vivo");
+            }
+
+            saludar() {
+                console.log(`Hola me llamo ${this.nombre}`);
+            }
+        }
+
+
+        // -------------Para hacer la herencia con EMASCRIPT6-------------------------
+
+
+        class Perro extends Animal {
+            constructor(nombre, genero, tamanio) {
+                // super es un metodo que manda a llamr el constructor de la clase padre:
+                super(nombre, genero);
+                this.tamanio = tamanio;
+            }
+            sonar() {
+                console.log("soy un perro y mi sonido es un ladrido");
+            }
+
+            ladrar() {
+                console.log("Guauuu Guauuu!!!");
+            }
+
+        }
+
+        const mini = new Animal("Mini", "Hembra");
+        const scooby = new Perro("Scooby", "Macho","Gigante");
+
+        console.log(mini);
+        mini.saludar();
+        mini.sonar();
+        console.log(scooby);
+        scooby.saludar();
+        scooby.sonar();
+        scooby.ladrar();
+
+
+    </script>
+</body>
+
+</html>
