@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Objeto Date</h1>
+
+    <script>
+        console.log(Date());
+
+        let fecha = new Date();
+        console.log(fecha);
+        // dia del mes
+        console.log(fecha.getDate());
+        // dia de la semana D-L-M-M-J-V-S-D
+        console.log(fecha.getDay());
+        // mes Ene-Feb-Mar-Abr-May-Jun-Jul-Ago-Sep-Oct-Nov-Dic
+        console.log(fecha.getMonth());
+        // año
+        console.log(fecha.getFullYear());
+        // Horas
+        console.log(fecha.getHours());
+        // Minutos
+        console.log(fecha.getMinutes());
+        // Segundos
+        console.log(fecha.getUTCMilliseconds());
+
+        // ---------------------------------------
+        // Para obtener la fecha de otra manera
+        console.log(fecha.toString());
+        // Asi puedo extraer el dia de la fecha como un string
+        console.log(fecha.toDateString());
+        // Para obtener la hora local
+        console.log(fecha.toLocaleString());
+        // Solo para la fecha
+        console.log(fecha.toLocaleDateString());
+        // Solo para la hora
+        console.log(fecha.toLocaleTimeString());
+        // Para obtener el uso horario en el que nos encontramos en minutos
+        console.log(fecha.getTimezoneOffset());
+        // Para obtener el dia  del GMT de Londres
+        console.log(fecha.getUTCDate());
+        // Para obtener las horas  del GMT de Londres
+        console.log(fecha.getUTCHours());
+        // Para obtener la fecha timestand (te da el instante) significa cuantos segundos han pasado desde el 1 de 1970 va directamente desde el constructor
+        console.log(Date.now());
+
+        // ----------------- Revisar la libreria MOMENTJS
+
+        // Para obetener 
+        let cumpleHumberto = new Date(1984,0,09);
+        console.log(cumpleHumberto);
+
+        
+
+    </script>
+</body>
+</html>
