@@ -1,15 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // Expresiones regulares
+        /*son una secuencia de caracteres que forman un patron de busqueda, principalmente utilizados para 
+        la busqueda de patrones de cadenas de caracteres.
+        https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular
+        https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+        */
 
+        let cadena = "hola Humberto, espero estes bien,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at tristique ex, quis feugiat nulla. Fusce et dui congue, facilisis.  humberto estudia programacion y administracion, ve videos de hola mundo y falcon master";
+
+        // let expReg = new RegExp("humberto", "ig");
+        // la bandera es la letra "i" la cual hace que ignore mayusculas y minusculas
+        // la bandera g hace que no se detenga en la primera coincidencia y siga buscando
+
+
+        //vamos a usar dos de los metodos de las expresiones regulares test() y exec()
+
+        // console.log(expReg.test(cadena));
+        // console.log(expReg.exec(cadena));
+
+        // let expReg2 = /humberto/ig;
+
+
+        // let expReg2 = /\d/ig;
+        // \d validamos si hay un numero de 0 al 9
+
+
+        // let expReg2 = /[0-9]/ig;
+        // las llaves indican un listado valido como no hay numeros valida a falso
         
+        let expReg2 = /humberto{1,2}/ig;
+        // los corchetes indican la cantidad de repeticiones, en {} va el rango por ejemplo {1,2} si lo dejamos asi {1,} es infinito
+
+        console.log(expReg2.test(cadena));
+        console.log(expReg2.exec(cadena));
+
+
     </script>
 </body>
+
 </html>
