@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="cadena" id="cadena">
+    <label for="cadena">Ingrese un texto</label>
+
+    <input type="number" name="numero" id="numero">
+    <label for="numero">Ingrese un numero para recortar la cadena</label>
+
+    <script>
+        
+        /*1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+        2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe.miFuncion("Hola Mundo", 4) devolverá "Hola".
+        3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe.miFuncion('hola que tal', ' ') devolverá['hola', 'que', 'tal'].
+        4) Programa una función que repita un texto X veces, pe.miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.*/
+
+
+        // DECLARACION DE VARIABLES
+        let cadena = document.getElementById('cadena');
+        let indicador = document.getElementById('numero').value;
+        let valor = parseInt(cadena.value);
+        let expresionRegular = /^([0-9])*$/
+
+
+        // FUNCION FLECHA PARA CONTAR EL NUMERO DE CARACTERES
+        let numeroCaracteres = contarCadena => {
+
+            if (expresionRegular.test(valor)) {
+                alert('Por Favor Introduzca un Texto')
+                cadena.value = "";               
+            } else {
+                console.log(cadena.value.length);
+            }
+        };
+
+
+        // FUNCION PARA RECORTAR EL TEXTO SEGUN EL NUMERO INDICADO
+        function cortarCadena() {
+            console.log(cadena.value.substr(0, indicador));
+        }
+
+
+        // FUNCION PARA DEVOLVER UN ARRAY
+        function generaArray() {
+            console.log(cadena.value.split(" "))
+        }
+
+
+        // FUNCION PARA REPETIR LA CADENA DE TEXTO
+        function repetirCadena() {
+            console.log(cadena.value.repeat(indicador))
+        }
+
+
+        numeroCaracteres();
+        cortarCadena();
+        generaArray();
+        repetirCadena();
+
+    </script>
+</body>
+
+</html>
