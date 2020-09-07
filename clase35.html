@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        // ---------------------------------EJERCICIO 1 -----------------------------------------
+
+        // respuesta 1 ojo que el signo ! nos determina que si cadena es diferente a cadena = ""; ejecuta la instruccion
+
+        // funcion declarada--------------------------------------------------------------------
+
+    //     function contarCaracteres(cadena = "") {
+    //         if (!cadena) {
+    //             console.warn("no ingreso ninguna cadena");
+    //         }else{
+    //             console.info(`la cadena "${cadena}" tiene ${cadena.length} caracteres`)
+    //         }
+    //     }
+
+    
+        // funcion expresada la mejor practica---------------------------------------------------
+
+    const contarCaracteres = (cadena = "") => 
+        (!cadena)
+            ? console.warn("no ingreso ninguna cadena")
+            : console.info(`la cadena "${cadena}" tiene ${cadena.length} caracteres`);
+
+
+    // contarCaracteres();
+    // contarCaracteres("Hola Mundo");
+
+
+
+    // ----------------------------------EJERCICIO 2 --------------------------------------------
+
+
+    // funcion expresada-------------------------------------------------------------------------
+
+    const recortarTexto = (cadena ="", longitud = undefined) =>
+        (!cadena)
+            ? console.warn("no ingreso ninguna cadena")
+            : (longitud === undefined)
+                ? console.warn("No ingresaste un numero")
+                : console.info(cadena.slice(0, longitud))
+    
+    // recortarTexto();
+    // recortarTexto("Hola Mundo", 4)
+    // recortarTexto("Hola Hola");
+    // recortarTexto("", 4)
+
+
+    // -------------------------------------EJERCICIO 3 ---------------------------------------------
+
+
+    // funcion expresada---------------------------------------------------------------------------
+
+    const cadenaAArreglo = (cadena = "", separador = undefined) =>
+        (!cadena)
+            ? console.warn("no ingreso ninguna cadena")
+            : (separador === undefined)
+                ? console.warn("No ingresaste un separador")
+                : console.info(cadena.split(separador))
+
+    // cadenaAArreglo("Hola,Mundo", ",");
+    // cadenaAArreglo();
+    // cadenaAArreglo("Hola Mundo");
+    // cadenaAArreglo("", " ")
+
+
+
+    // -------------------------------------EJERCICIO 4 -----------------------------------------------------
+
+
+    // funcion expresada
+
+    const repetirTexto = (cadena = "", veces = undefined) =>{
+        if (!cadena) return  console.warn("no ingresaste un texto");
+
+        if(veces === undefined) return console.warn("no ingresaste el numero de veces a repetir");
+
+        if(veces === 0) return console.error("el numero de veces no puede ser 0");
+
+        // el metodo sign del objeto Math te devuelve un 0 si el numero es 0 si el numero es positivo te devuelve 1 y si el numero es negativo te devuelve -1
+
+        if(Math.sign(veces) === -1) return console.error("el numero de veces no puede ser negativo");
+
+        for (let i = 1; i <= veces; i++) console.info(`${cadena}, ${i}`);
+            
+    };
+
+    repetirTexto("hola mundo", 3);
+    repetirTexto("hola mundo", 0);
+    repetirTexto("hola mundo", -20);
+    repetirTexto("hola mundo");
+    repetirTexto("", 3);
+            
+
+
+
+    
+    </script>
+</body>
+</html>
